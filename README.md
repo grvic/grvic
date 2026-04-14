@@ -7,7 +7,7 @@
 ## 👩‍💻 About Me
 
 I'm a **Cloud & AI Data Solution Engineer** specializing in **technical pre-sales** and delivery acceleration:
-- 🏗️ Designing end-to-end **Data & AI solutions** (Microsoft Fabric, Microsft Foundry)
+- 🏗️ Designing end-to-end **Data & AI solutions** (Microsoft Fabric, Microsoft Foundry)
 - 📊 Leading workshops, proofs of concept, and architecture sessions
 - 🤝 Partnering with Sales, Partners, and Engineering to **remove blockers** and drive successful deployments
 
