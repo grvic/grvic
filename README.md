@@ -40,10 +40,10 @@ BSc in **Data Science & Engineering** with a focus on **practical, real-world AI
 
 ## 🎓 Education
 
-- **BSc in Data Science & Engineering** — Universidad Carlos III de Madrid
+- **BSc in Data Science & Engineering**: Universidad Carlos III de Madrid
 - **Microcredential**: Responsible AI & Business Innovation
-- **Politechnika Warszawska** — Erasmus Exchange (Electronics & IT)
-- **MSc in AI Research** — *Coming soon*
+- **Politechnika Warszawska**: Erasmus Exchange (Electronics & IT)
+- **MSc in AI Research**: *Coming soon*
 ---
 
 ## 🤝 Let's Connect [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/victoriafaranna)
