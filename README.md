@@ -1,6 +1,6 @@
 # Hi there, I'm **Victoria Faranna** 👩‍💻
 
- 💼 Data Solution Engineer (Cloud & AI) at **Microsoft**
+Cloud & AI Data Solution Engineer at **Microsoft**
 
 ---
 
