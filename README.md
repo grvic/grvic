@@ -33,7 +33,7 @@ BSc in **Data Science & Engineering** with a focus on **practical, real-world AI
 
 ## Certifications
 
-- **Microsoft Certified**: AZ-900, DP-900, AI-900, AI-102, DP-100, DP-600, DP-700
+- **Microsoft Certified**: AZ-900, DP-900, AI-900, AI-102, DP-100, DP-600, DP-700, AB-100
 - **Databricks Certified**: Data Engineer Associate
 
 ---
