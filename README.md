@@ -122,6 +122,10 @@ Hi, I'm **Victoria** 👋 — Cloud & AI Data Solution Engineer at **Microsoft**
   <img src="assets/talk-light.svg" width="100%" alt="Women in Fabric 2026 — Speaker (co-presented): «Cómo pasar de Data Platform a Application Platform con Fabric y apps agénticas» · 3 Oct 2026">
 </picture>
 
+<p align="center">
+  <a href="https://sessionize.com/victoriafaranna/"><img src="assets/nav/sessionize.svg" height="46" alt="Talks &amp; events on Sessionize"></a>
+</p>
+
 <a id="activity"></a>
 
 <img src="assets/bars/activity.svg" width="100%" alt="system_monitor.exe — GitHub activity">

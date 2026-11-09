@@ -686,6 +686,10 @@ def readme(P, G):
     for tk in P.get("talks", []):
         a(picture("talk", f'{tk["event"]} — {tk["role"]}: «{tk["title"]}» · {tk["date"]}'))
         a("")
+    if P.get("sessionize"):
+        a('<p align="center">')
+        a(f'  <a href="{P["sessionize"]}"><img src="assets/nav/sessionize.svg" height="46" alt="Talks &amp; events on Sessionize"></a>')
+        a("</p>\n")
 
     # activity
     a('<a id="activity"></a>\n')
@@ -761,6 +765,8 @@ def main():
         for label, ic in [("about", "doc"), ("achievements", "medal"), ("projects", "folder"), ("talks", "mic"),
                           ("activity", "chart"), ("guestbook", "pen"), ("linkedin", "card"), ("portfolio", "globe"), ("top", "star")]:
             write(f"assets/nav/{label}.svg", nav_button("back to top" if label == "top" else label, ic))
+        if P.get("sessionize"):
+            write("assets/nav/sessionize.svg", nav_button("talks & events on Sessionize", "mic"))
         for i, x in enumerate([y for y in P["certs"] if y.get("show", True)]):
             write(f"assets/badges/{slug(x['code'])}.svg", badge_card(x, i))
         write("assets/guestbook-button.svg", guestbook_button())

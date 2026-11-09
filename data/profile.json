@@ -6,6 +6,7 @@
   "location": "Madrid, Spain",
   "tagline": "I measure what AI demos leave out.",
   "linkedin": "https://www.linkedin.com/in/victoriafaranna",
+  "sessionize": "https://sessionize.com/victoriafaranna/",
   "portfolio": "",
   "typing": [
     "Cloud & AI Data Solution Engineer @ Microsoft",
@@ -47,7 +48,7 @@
     },
     {
       "cmd": "dir achievements",
-      "out": "{certs} certifications · {issuers} issuers · {talks} conference talk"
+      "out": "{certs} certifications · {issuers} issuers · conference speaking"
     },
     {
       "cmd": "echo %MOTTO%",
