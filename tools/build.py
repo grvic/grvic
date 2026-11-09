@@ -714,10 +714,6 @@ def crew(t, P):
     # XP-style status bar
     sy = H - 46
     body.append(f'<rect x="20" y="{sy}" width="{W - 46}" height="24" rx="3" fill="{t["paper2"]}" stroke="{t["ink3"]}" stroke-opacity=".5"/>')
-    if shared:
-        body.append(icon("star", 28, sy + 4, 1))
-        body.append(f'<text x="50" y="{sy + 17}" font-family="{FONT_UI}" font-size="13" fill="{t["ink2"]}">'
-                    f'{esc(" · ".join(sorted(shared)))} = crew stat, every cat has it</text>')
     n_stats = sum(len(c.get("stats", [])[:4]) for c in P["cats"])
     body.append(f'<text x="{W - 36}" y="{sy + 17}" text-anchor="end" font-family="{FONT_UI}" font-size="13" fill="{t["ink2"]}">'
                 f'{len(P["cats"])} cats · {n_stats} stats · {STAT_MAX} = MAX</text>')

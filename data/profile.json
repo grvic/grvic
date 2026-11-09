@@ -346,9 +346,9 @@
       "accent": "#4DB9BE",
       "stats": [
         { "label": "Stealth", "value": 9 },
-        { "label": "Elegance", "value": 10 },
+        { "label": "Elegance", "value": 9 },
         { "label": "Food begging", "value": 9 },
-        { "label": "Zoomies", "value": 8 }
+        { "label": "Zoomies", "value": 9 }
       ]
     },
     {
@@ -358,9 +358,9 @@
       "accent": "#3C85D6",
       "stats": [
         { "label": "Gravity testing", "value": 9 },
-        { "label": "Intelligence", "value": 10 },
+        { "label": "Smarts", "value": 9 },
         { "label": "Lap occupancy", "value": 8 },
-        { "label": "Zoomies", "value": 9 }
+        { "label": "Zoomies", "value": 7 }
       ]
     },
     {
@@ -372,8 +372,8 @@
       "stats": [
         { "label": "Nap power", "value": 10 },
         { "label": "Fluff density", "value": 9 },
-        { "label": "Destroy power", "value": 9 },
-        { "label": "Zoomies", "value": 3 }
+        { "label": "Destroy effectiveness", "value": 9 },
+        { "label": "Zoomies", "value": 6 }
       ]
     }
   ]
