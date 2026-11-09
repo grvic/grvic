@@ -502,7 +502,7 @@ def badge_card(c, idx):
             f'<text x="{(W - 8) / 2}" y="156" text-anchor="middle" font-family="{FONT_MONO}" font-size="18" font-weight="800" fill="{ink}">{esc(c["code"])}</text>']
     for j, line in enumerate(wrap(c["short"], 21)[:2]):
         body.append(f'<text x="{(W - 8) / 2}" y="{175 + j * 15}" text-anchor="middle" font-family="{FONT_UI}" font-size="12" fill="{ink2}">{esc(line)}</text>')
-    pill = "LEGACY" if legacy else c["level"].upper()
+    pill = "IN PROGRESS" if c.get("status") == "In progress" else "LEGACY" if legacy else c["level"].upper()
     pw = len(pill) * 7 + 16
     pfill, ptext_c = (tr["light"], tr["dark"]) if not legacy else ("#E3E3E3", "#4A4A4A")
     body.append(f'<rect x="{(W - 8) / 2 - pw / 2}" y="{H - 34}" width="{pw}" height="20" rx="10" fill="{pfill}" stroke="{ptext_c}" stroke-width="1.5"/>'
@@ -510,6 +510,8 @@ def badge_card(c, idx):
     css = (".float{animation:float 2.6s steps(1,end) infinite}@keyframes float{50%{transform:translateY(-1px)}}"
            ".bshine{animation:bshine 5s ease-in infinite}@keyframes bshine{0%,72%{transform:translateX(0) skewX(-20deg)}100%{transform:translateX(44px) skewX(-20deg)}}")
     level = c["level"] + (", legacy — " + c["note"] if legacy and c.get("note") else "")
+    if c.get("status") == "In progress":
+        level += ", In progress"
     return svg_doc(W, H, "".join(body), style=css, title=f'{c["code"]} — {c["name"]}', desc=f'{c["issuer"]} · {level}')
 
 
@@ -592,7 +594,7 @@ def crew(t, P):
 
 # =========================================================================== README
 def cert_status(x):
-    if x.get("status"):
+    if "status" in x:
         return x["status"]
     if x.get("legacy"):
         return "Legacy — " + x.get("note", "exam retired")

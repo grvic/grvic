@@ -75,10 +75,10 @@ Hi, I'm **Victoria** 👋 — Cloud & AI Data Solution Engineer at **Microsoft**
 | **AB-100** | [Microsoft Certified: Agentic AI Business Solutions Architect Expert](https://learn.microsoft.com/credentials/certifications/agentic-ai-business-solutions-architect/) | Microsoft | Expert | Annual renewal |
 | **DP-700** | [Microsoft Certified: Fabric Data Engineer Associate](https://learn.microsoft.com/credentials/certifications/fabric-data-engineer-associate/) | Microsoft | Associate | Annual renewal |
 | **DP-600** | [Microsoft Certified: Fabric Analytics Engineer Associate](https://learn.microsoft.com/credentials/certifications/fabric-analytics-engineer-associate/) | Microsoft | Associate | Annual renewal |
-| **GH-600** | [GitHub Certified: Agentic AI Developer](https://learn.microsoft.com/credentials/certifications/agentic-ai-developer/) | GitHub | Intermediate | Active |
+| **GH-600** | [GitHub Certified: Agentic AI Developer](https://learn.microsoft.com/credentials/certifications/agentic-ai-developer/) | GitHub | Intermediate | In progress |
 | **DBX-DEA** | [Databricks Certified Data Engineer Associate](https://www.databricks.com/learn/certification/data-engineer-associate) | Databricks | Associate | Valid 2 years |
-| **AI-102** | [Microsoft Certified: Azure AI Engineer Associate](https://learn.microsoft.com/credentials/certifications/azure-ai-engineer/) | Microsoft | Associate | Legacy — exam retired Jun 2026 (successor: AI-103) |
-| **DP-100** | [Microsoft Certified: Azure Data Scientist Associate](https://learn.microsoft.com/credentials/certifications/azure-data-scientist/) | Microsoft | Associate | Legacy — exam retired Jun 2026 (successor: AI-300) |
+| **AI-102** | [Microsoft Certified: Azure AI Engineer Associate](https://learn.microsoft.com/credentials/certifications/azure-ai-engineer/) | Microsoft | Associate |  |
+| **DP-100** | [Microsoft Certified: Azure Data Scientist Associate](https://learn.microsoft.com/credentials/certifications/azure-data-scientist/) | Microsoft | Associate |  |
 | **AB-731** | [Microsoft Certified: AI Transformation Leader](https://learn.microsoft.com/credentials/certifications/ai-transformation-leader/) | Microsoft | Beginner | Active |
 | **AB-730** | [Microsoft Certified: AI Business Professional](https://learn.microsoft.com/credentials/certifications/ai-business-professional/) | Microsoft | Beginner | Active |
 | **AZ-900** | [Microsoft Certified: Azure Fundamentals](https://learn.microsoft.com/credentials/certifications/azure-fundamentals/) | Microsoft | Fundamentals | No expiry |

@@ -169,6 +169,7 @@
       "short": "Agentic AI Developer",
       "name": "GitHub Certified: Agentic AI Developer",
       "issuer": "GitHub",
+      "status": "In progress",
       "tier": 2,
       "level": "Intermediate",
       "track": "dev",
@@ -195,8 +196,7 @@
       "tier": 2,
       "level": "Associate",
       "track": "ai",
-      "legacy": true,
-      "note": "exam retired Jun 2026 (successor: AI-103)",
+      "status": "",
       "url": "https://learn.microsoft.com/credentials/certifications/azure-ai-engineer/",
       "show": true
     },
@@ -208,8 +208,7 @@
       "tier": 2,
       "level": "Associate",
       "track": "ai",
-      "legacy": true,
-      "note": "exam retired Jun 2026 (successor: AI-300)",
+      "status": "",
       "url": "https://learn.microsoft.com/credentials/certifications/azure-data-scientist/",
       "show": true
     },
