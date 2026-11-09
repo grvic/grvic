@@ -132,8 +132,7 @@ def card(t: dict, s: dict | None, updated: str) -> str:
     body.append(f'<text x="{lx + 5 * 16 + 4}" y="{ly}" font-family="{FONT_MONO}" font-size="12" fill="{t["ink2"]}">more</text>')
     # tiles
     tiles = [("CONTRIBUTIONS · 1Y", s["total"], "chart"), ("CURRENT STREAK · DAYS", s["streak"], "star"),
-             ("BEST STREAK · DAYS", s["best"], "medal"), ("PUBLIC REPOS", s["repos"], "folder"),
-             ("STARS EARNED", s["stars"], "star"), ("PULL REQUESTS", s["prs"], "pen")]
+             ("BEST STREAK · DAYS", s["best"], "medal")]
     tx0, ty0, tw, th = 548, 64, 222, 78
     for i, (label, val, ic) in enumerate(tiles):
         cx, cy = tx0 + (i % 3) * (tw + 12), ty0 + (i // 3) * (th + 12)
@@ -163,7 +162,7 @@ def card(t: dict, s: dict | None, updated: str) -> str:
                ".grow{transform-box:fill-box;transform-origin:left center;animation:grow 1.2s cubic-bezier(.2,.8,.2,1) .3s both}"
                "@keyframes grow{from{transform:scaleX(0)}}")
     desc = (f'{s["total"]} contributions in the last year · current streak {s["streak"]} days · longest {s["best"]} days · '
-            f'{s["repos"]} public repos · {s["stars"]} stars · {s["prs"]} pull requests · top languages: '
+            'top languages: '
             + ", ".join(f"{n} {f * 100:.0f}%" for n, _, f in s["langs"]))
     return svg_doc(W, H, "".join(body), defs=grad_defs(t), style="".join(css), title="GitHub activity", desc=desc)
 
