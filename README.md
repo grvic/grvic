@@ -154,7 +154,10 @@ Hi, I'm **Victoria** 👋 — Cloud & AI Data Solution Engineer at **Microsoft**
 <p align="center"><sub>Click → <b>Create</b> → a friendly bot adds your avatar below and closes the issue. Only your public avatar is shown.</sub></p>
 
 <!-- GUESTBOOK:START -->
-<p align="center"><sub>No signatures yet — be the first! ✨</sub></p>
+<p align="center">
+  <a href="https://github.com/JuanMallodelaCalle"><img src="https://github.com/JuanMallodelaCalle.png?size=88" width="44" height="44" alt="@JuanMallodelaCalle" title="@JuanMallodelaCalle"></a>
+</p>
+<p align="center"><sub>1 visitor signed so far ✨</sub></p>
 <!-- GUESTBOOK:END -->
 
 <details>
