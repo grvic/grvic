@@ -345,8 +345,8 @@
       "class": "Night rogue",
       "accent": "#4DB9BE",
       "stats": [
-        { "label": "Stealth", "value": 9 },
-        { "label": "Elegance", "value": 9 },
+        { "label": "Stealth", "value": 7 },
+        { "label": "Elegance", "value": 8 },
         { "label": "Food begging", "value": 9 },
         { "label": "Zoomies", "value": 9 }
       ]

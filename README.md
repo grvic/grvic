@@ -165,7 +165,7 @@ Hi, I'm **Victoria** 👋 — Cloud & AI Data Solution Engineer at **Microsoft**
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/crew-dark.svg">
-  <img src="assets/crew-light.svg" width="100%" alt="The crew and their stats. Coco (Night rogue): Stealth 9/10, Elegance 9/10, Food begging 9/10, Zoomies 9/10; Nemo (Chaos engineer): Gravity testing 9/10, Smarts 9/10, Lap occupancy 8/10, Zoomies 7/10; Tofu (Nap master): Nap power MAX, Fluff density 9/10, Destroy effectiveness 9/10, Zoomies 6/10 — shared crew stat: Zoomies">
+  <img src="assets/crew-light.svg" width="100%" alt="The crew and their stats. Coco (Night rogue): Stealth 7/10, Elegance 8/10, Food begging 9/10, Zoomies 9/10; Nemo (Chaos engineer): Gravity testing 9/10, Smarts 9/10, Lap occupancy 8/10, Zoomies 7/10; Tofu (Nap master): Nap power MAX, Fluff density 9/10, Destroy effectiveness 9/10, Zoomies 6/10 — shared crew stat: Zoomies">
 </picture>
 
 </details>
