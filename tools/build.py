@@ -763,7 +763,7 @@ def readme(P, G):
     a('<a id="about"></a>\n')
     a('<img src="assets/terminal.svg" width="100%" alt="Terminal: whoami → Victoria Faranna, Cloud &amp; AI Data Solution Engineer at Microsoft">\n')
     a(P["intro"] + "\n")
-    a(f"> 🔎 *{P['tagline'].rstrip('.')}* — quality, cost, emissions and governance included.\n")
+    a(f"> 🔎 *{P['tagline']}*\n")
     for f_ in P["focus"]:
         a(f"- {f_}")
     a("")
