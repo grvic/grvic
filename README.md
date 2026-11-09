@@ -18,7 +18,7 @@
 
 Hi, I'm **Victoria** 👋 — Cloud & AI Data Solution Engineer at **Microsoft**, based in Madrid. I help teams go from idea to a working **Data & AI** solution: architecture sessions, workshops and proofs of concept on **Microsoft Fabric** and **Microsoft Foundry**, side by side with Sales, Partners and Engineering.
 
-> 🔎 *Fabric your data, Foundry the intelligence.*
+> 🔎 *Fabric your data, found the intelligence.*
 
 - 🏗️ **End-to-end Data & AI architecture** — Microsoft Fabric, Microsoft Foundry, agentic apps
 - 🧪 **Workshops, proofs of concept & architecture sessions** that remove blockers

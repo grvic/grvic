@@ -4,14 +4,14 @@
   "role": "Cloud & AI Data Solution Engineer",
   "company": "Microsoft",
   "location": "Madrid, Spain",
-  "tagline": "Fabric your data, Foundry the intelligence.",
+  "tagline": "Fabric your data, found the intelligence.",
   "linkedin": "https://www.linkedin.com/in/victoriafaranna",
   "sessionize": "https://sessionize.com/victoriafaranna/",
   "portfolio": "",
   "typing": [
     "Cloud & AI Data Solution Engineer @ Microsoft",
     "Microsoft Fabric · Microsoft Foundry · agents",
-    "Fabric your data, Foundry the intelligence.",
+    "Fabric your data, found the intelligence.",
     "Speaker @ Women in Fabric 2026",
     "MSc AI Research (UNED) · in progress"
   ],
@@ -52,7 +52,7 @@
     },
     {
       "cmd": "echo %MOTTO%",
-      "out": "\"Fabric your data, Foundry the intelligence.\"",
+      "out": "\"Fabric your data, found the intelligence.\"",
       "highlight": true
     }
   ],

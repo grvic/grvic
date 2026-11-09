@@ -124,7 +124,7 @@ PAL = {
     "k": "#0E1726", "w": "#FFFFFF", "b": "#1F5FD6", "l": "#7CC0FF", "y": "#FFD23F", "o": "#FF7A1A",
     "g": "#2F9E44", "G": "#8FD16A", "r": "#E0482C", "p": "#D6337F", "v": "#7B5CFF", "s": "#C5CCDA",
     "d": "#3B4A5E", "t": "#F3F0E6", "n": "#8A5A2B", "h": "#3A2416", "S": "#F2C6A0", "m": "#C2185B",
-    "c": "#1F5FD6", "B": "#DCEEFF", "e": "#0E1726", "T": "#12A38A",
+    "c": "#1F5FD6", "B": "#DCEEFF", "e": "#0E1726", "T": "#12A38A", "R": "#C4471B", "Q": "#E8742E",
 }
 
 ICONS = {
@@ -234,10 +234,10 @@ def icon(name: str, x: float, y: float, scale: float = 1, extra: str = "") -> st
 
 
 AVATAR = [
-    "bbbbbbbbbbbbbbbb", "bbbbbhhhhhhbbbbb", "bbbbhhhhhhhhbbbb", "bbbhhhhhhhhhhbbb",
-    "bbbhhSSSSSSShbbb", "bbhhSSeeSSeeShbb", "bbhhSSSSSSSSSShb", "bbhhSSSSSSSSShhb",
-    "bbhhSSSmmmSShhbb", "bbhhhSSSSSSShhbb", "bbhhhhSSSSShhhbb", "bbhhhccccccchhbb",
-    "bbbhcccwwccchhbb", "bbbcccccccccccbb", "bbccccccccccccbb", "bbccccccccccccbb",
+    "bbbbbbbbbbbbbbbb", "bbbbbRQQQRRbbbbb", "bbbbRQQRRRRRbbbb", "bbbRRQRRRRRRRbbb",
+    "bbbRRSSSSSSSRbbb", "bbRRSSeeSSeeSRbb", "bbRRSSSSSSSSSSRb", "bbRRSSSSSSSSSRRb",
+    "bbRRSSSmmmSSRRbb", "bbRRRSSSSSSSRRbb", "bbRRRRSSSSSRRRbb", "bbRRRccccccRRRbb",
+    "bbbRcccwwcccRRbb", "bbbcccccccccccbb", "bbccccccccccccbb", "bbccccccccccccbb",
 ]
 
 
