@@ -341,21 +341,15 @@
   "cats": [
     {
       "name": "Coco",
-      "sprite": "coco-run.png",
-      "class": "Shadow rogue",
-      "stats": {"STEALTH": 10, "AGILITY": 9, "CHAOS": 7}
+      "sprite": "coco-run.png"
     },
     {
       "name": "Nemo",
-      "sprite": "nemo-run.png",
-      "class": "Chaos berserker",
-      "stats": {"ENERGY": 10, "CHAOS": 10, "STEALTH": 2}
+      "sprite": "nemo-run.png"
     },
     {
       "name": "Tofu",
-      "sprite": "tofu-run.png",
-      "class": "Cozy healer",
-      "stats": {"HEALING": 10, "CHARM": 9, "NAP POWER": 10}
+      "sprite": "tofu-run.png"
     }
   ]
 }

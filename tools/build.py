@@ -581,25 +581,15 @@ def guestbook_button():
 
 # =========================================================================== crew (cats)
 def crew(t, P):
-    W, H = 1280, 428
+    W, H = 1280, 286
     body = [window(8, 8, W - 22, H - 22, "cats.exe — the crew", t, icon_name="heart")]
     n = len(P["cats"])
     for i, c in enumerate(P["cats"]):
-        cx = 10 + (i + .5) * (W - 20) / n
-        body.append(f'<rect x="{cx - 184}" y="54" width="368" height="340" rx="8" fill="{t["paper2"]}" stroke="{t["ink3"]}" stroke-width="2"/>')
+        cx = 220 + i * 420
         body.append(f'<rect x="{cx - 110}" y="196" width="220" height="8" fill="{t["hill"][1]}" shape-rendering="crispEdges"/>')
         body.append(f'<g transform="translate({cx - 80} 66) scale(2)">{cat_frames(c["sprite"])}</g>')
         body.append(f'<text x="{cx}" y="234" text-anchor="middle" font-family="{FONT_UI}" font-size="20" font-weight="700" fill="{t["ink"]}">{esc(c["name"])}</text>')
-        body.append(f'<text x="{cx}" y="260" text-anchor="middle" font-family="{FONT_MONO}" font-size="14" font-weight="700" fill="{t["accent"]}">{esc(c["class"].upper())}</text>')
-        for j, (label, value) in enumerate(c["stats"].items()):
-            y = 300 + j * 34
-            body.append(f'<text x="{cx - 162}" y="{y}" font-family="{FONT_MONO}" font-size="13" font-weight="700" fill="{t["ink2"]}">{esc(label)}</text>')
-            for k in range(10):
-                fill = t["accent"] if k < value else t["paper"]
-                body.append(f'<rect x="{cx - 60 + k * 18}" y="{y - 12}" width="13" height="14" fill="{fill}" stroke="{t["ink3"]}" stroke-width="1" shape-rendering="crispEdges"/>')
-            body.append(f'<text x="{cx + 164}" y="{y}" text-anchor="end" font-family="{FONT_MONO}" font-size="13" fill="{t["ink"]}">{value}/10</text>')
-    desc = " · ".join(f'{c["name"]}: {c["class"]}; ' + ", ".join(f"{label} {value}/10" for label, value in c["stats"].items()) for c in P["cats"])
-    return svg_doc(W, H, "".join(body), defs=grad_defs(t), style=TB_SHINE_CSS + CAT_CSS, title="The crew: " + ", ".join(c["name"] for c in P["cats"]), desc=desc)
+    return svg_doc(W, H, "".join(body), defs=grad_defs(t), style=TB_SHINE_CSS + CAT_CSS, title="The crew: " + ", ".join(c["name"] for c in P["cats"]))
 
 
 # =========================================================================== README
