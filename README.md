@@ -161,11 +161,11 @@ Hi, I'm **Victoria** 👋 — Cloud & AI Data Solution Engineer at **Microsoft**
 <!-- GUESTBOOK:END -->
 
 <details>
-<summary><b>🐈 cats.exe</b> — meet the crew running around this page</summary>
+<summary><b>🐈 cats.exe</b> — meet the crew running around this page (and their stats)</summary>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/crew-dark.svg">
-  <img src="assets/crew-light.svg" width="100%" alt="Coco, Nemo and Tofu, three pixel cats">
+  <img src="assets/crew-light.svg" width="100%" alt="The crew and their stats. Coco (Night rogue): Stealth 9/10, Elegance MAX, Food begging 9/10, Zoomies 8/10; Nemo (Chaos engineer): Gravity testing 9/10, Intelligence MAX, Lap occupancy 8/10, Zoomies 9/10; Tofu (Nap master): Nap power MAX, Fluff density 9/10, Destroy power 9/10, Zoomies 3/10 — shared crew stat: Zoomies">
 </picture>
 
 </details>

@@ -580,16 +580,149 @@ def guestbook_button():
 
 
 # =========================================================================== crew (cats)
+STAT_MAX = 10          # a stat at this value is drawn as "MAX"
+SEG_W, SEG_GAP, SEG_H = 12, 3, 14
+
+
+def _crew_css():
+    """Bars refill left to right every 12 s, cards take turns being 'selected', MAX shimmers, Tofu snores."""
+    seg = "".join(f".s{k}{{animation:s{k} 12s steps(1,end) infinite backwards}}"
+                  f"@keyframes s{k}{{0%{{opacity:0}}{2 + k * .7:.1f}%,100%{{opacity:1}}}}" for k in range(STAT_MAX))
+    return (seg +
+            ".sel{opacity:0;animation:sel 9s steps(1,end) infinite}"
+            "@keyframes sel{0%{opacity:1}33.333%,100%{opacity:0}}"
+            ".shim{animation:shim 3.4s ease-in-out infinite}"
+            "@keyframes shim{0%,15%{transform:translateX(0)}70%,100%{transform:translateX(200px)}}"
+            ".spk{animation:spk 1.1s steps(1,end) infinite}"
+            "@keyframes spk{0%{opacity:1}50%,100%{opacity:.15}}"
+            ".zz{animation:zz 3.6s linear infinite}"
+            "@keyframes zz{0%{opacity:0;transform:translate(0,0)}15%{opacity:1}75%{opacity:.85}100%{opacity:0;transform:translate(-16px,-34px)}}")
+
+
+def crew_shared(P):
+    """Stat labels every cat has (e.g. Zoomies) — marked with a star as a crew stat."""
+    sets = [{s_["label"] for s_ in c.get("stats", [])} for c in P["cats"]]
+    return set.intersection(*sets) if sets else set()
+
+
+def crew_alt(P):
+    shared = crew_shared(P)
+    parts = []
+    for c in P["cats"]:
+        st = ", ".join(f'{s_["label"]} {"MAX" if s_["value"] >= STAT_MAX else str(s_["value"]) + "/" + str(STAT_MAX)}'
+                       for s_ in c.get("stats", []))
+        parts.append(f'{c["name"]}' + (f' ({c["class"]})' if c.get("class") else "") + (f": {st}" if st else ""))
+    tail = f' — shared crew stat: {", ".join(sorted(shared))}' if shared else ""
+    return "The crew and their stats. " + "; ".join(parts) + tail
+
+
+def _stat_bar(x, y, value, accent, t, uid, delay):
+    """10 pixel segments; value == STAT_MAX gets the gold MAX treatment."""
+    is_max = value >= STAT_MAX
+    empty_op = ".22" if t["name"] == "light" else ".38"
+    out = []
+    for k in range(STAT_MAX):
+        sx = x + k * (SEG_W + SEG_GAP)
+        out.append(f'<rect x="{sx}" y="{y}" width="{SEG_W}" height="{SEG_H}" fill="{t["ink3"]}" fill-opacity="{empty_op}"/>')
+    for k in range(min(value, STAT_MAX)):
+        sx = x + k * (SEG_W + SEG_GAP)
+        fill = "url(#maxg)" if is_max else accent
+        out.append(f'<g class="s{k}" style="animation-delay:{delay:.2f}s">'
+                   f'<rect x="{sx}" y="{y}" width="{SEG_W}" height="{SEG_H}" fill="{fill}"/>'
+                   f'<rect x="{sx}" y="{y}" width="{SEG_W}" height="3" fill="#FFFFFF" fill-opacity=".45"/>'
+                   f'<rect x="{sx}" y="{y + SEG_H - 3}" width="{SEG_W}" height="3" fill="#000000" fill-opacity=".22"/></g>')
+    if is_max:
+        w = STAT_MAX * (SEG_W + SEG_GAP) - SEG_GAP
+        rects = "".join(f'<rect x="{x + k * (SEG_W + SEG_GAP)}" y="{y}" width="{SEG_W}" height="{SEG_H}"/>' for k in range(STAT_MAX))
+        out.append(f'<clipPath id="clip{uid}">{rects}</clipPath>'
+                   f'<g clip-path="url(#clip{uid})"><path class="shim" d="M{x - 40} {y + SEG_H}l10 -{SEG_H}h16l-10 {SEG_H}z" '
+                   f'fill="#FFFFFF" fill-opacity=".75"/></g>')
+    return "".join(out), (STAT_MAX * (SEG_W + SEG_GAP) - SEG_GAP)
+
+
 def crew(t, P):
-    W, H = 1280, 286
-    body = [window(8, 8, W - 22, H - 22, "cats.exe — the crew", t, icon_name="heart")]
-    n = len(P["cats"])
+    W, H = 1280, 474
+    light = t["name"] == "light"
+    shared = crew_shared(P)
+    body = [window(8, 8, W - 22, H - 22, "cats.exe — the crew", t, icon_name="heart", subtitle="stats.sav")]
+    defs = grad_defs(t) + ('<linearGradient id="maxg" x1="0" y1="0" x2="1" y2="0">'
+                           f'<stop offset="0" stop-color="#FFD23F"/><stop offset=".55" stop-color="#FF9A3D"/>'
+                           f'<stop offset="1" stop-color="{t["accent2"]}"/></linearGradient>')
+    card_y, card_h = 54, 366
     for i, c in enumerate(P["cats"]):
         cx = 220 + i * 420
-        body.append(f'<rect x="{cx - 110}" y="196" width="220" height="8" fill="{t["hill"][1]}" shape-rendering="crispEdges"/>')
-        body.append(f'<g transform="translate({cx - 80} 66) scale(2)">{cat_frames(c["sprite"])}</g>')
-        body.append(f'<text x="{cx}" y="234" text-anchor="middle" font-family="{FONT_UI}" font-size="20" font-weight="700" fill="{t["ink"]}">{esc(c["name"])}</text>')
-    return svg_doc(W, H, "".join(body), defs=grad_defs(t), style=TB_SHINE_CSS + CAT_CSS, title="The crew: " + ", ".join(c["name"] for c in P["cats"]))
+        acc = c.get("accent", t["accent"])
+        acc_txt = _mix(acc, "#0E1726", .45) if light else _mix(acc, "#FFFFFF", .2)
+        x0 = cx - 190
+        # card + "selected" frame that cycles P1 → P2 → P3
+        body.append(f'<rect x="{x0}" y="{card_y}" width="380" height="{card_h}" rx="8" fill="{t["paper2"]}" '
+                    f'stroke="{t["ink3"]}" stroke-opacity=".55" stroke-width="1.5"/>')
+        body.append(f'<rect class="sel" style="animation-delay:{i * 3}s" x="{x0 - 3}" y="{card_y - 3}" width="386" height="{card_h + 6}" '
+                    f'rx="10" fill="none" stroke="{acc}" stroke-width="3.5"/>')
+        tag = f"P{i + 1}"
+        body.append(f'<rect x="{x0 + 10}" y="{card_y + 10}" width="34" height="22" rx="4" fill="{acc}"/>'
+                    + ptext(tag, x0 + 10 + (34 - ptext_width(tag, 2)) / 2, card_y + 14, 2, "#0E1726"))
+        # soft spotlight in the cat's colour (also keeps dark Coco readable on the dark theme)
+        body.append(f'<radialGradient id="spot{i}"><stop offset="0" stop-color="{acc}" stop-opacity="{".26" if light else ".42"}"/>'
+                    f'<stop offset=".65" stop-color="{acc}" stop-opacity="{".08" if light else ".14"}"/>'
+                    f'<stop offset="1" stop-color="{acc}" stop-opacity="0"/></radialGradient>'
+                    f'<ellipse cx="{cx}" cy="150" rx="150" ry="78" fill="url(#spot{i})"/>')
+        # sprite on its patch of grass
+        body.append(f'<rect x="{cx - 110}" y="204" width="220" height="8" fill="{t["hill"][1]}" shape-rendering="crispEdges"/>')
+        body.append(f'<rect x="{cx - 110}" y="212" width="220" height="4" fill="{t["hill"][2]}" shape-rendering="crispEdges"/>')
+        body.append(f'<g transform="translate({cx - 80} 74) scale(2)">{cat_frames(c["sprite"])}</g>')
+        if c.get("fx") == "zzz":
+            for k, (dx, dy, sc) in enumerate([(-58, 92, 1.5), (-70, 80, 2), (-84, 66, 2.5)]):
+                body.append(f'<g class="zz" style="animation-delay:-{k * 1.2:.1f}s">'
+                            + ptext("Z", cx + dx, dy, sc, acc_txt) + "</g>")
+        # name + class
+        body.append(f'<text x="{cx}" y="246" text-anchor="middle" font-family="{FONT_UI}" font-size="22" font-weight="700" '
+                    f'fill="{t["ink"]}">{esc(c["name"])}</text>')
+        if c.get("class"):
+            cl = c["class"].upper()
+            cw = ptext_width(cl, 2) + 16
+            body.append(f'<rect x="{cx - cw / 2}" y="256" width="{cw}" height="22" rx="4" fill="{acc}" fill-opacity=".18" '
+                        f'stroke="{acc}" stroke-width="1.5"/>' + ptext(cl, cx - cw / 2 + 8, 260, 2, acc_txt))
+        # stats: own ones first, shared crew stats last (after a dashed rule, with a star)
+        stats = sorted(c.get("stats", [])[:4], key=lambda s_: s_["label"] in shared)
+        body.append(f'<line x1="{x0 + 14}" y1="292" x2="{x0 + 366}" y2="292" stroke="{t["ink3"]}" stroke-opacity=".6" '
+                    f'stroke-dasharray="4 4"/>')
+        for r, s_ in enumerate(stats):
+            ry = 314 + r * 30
+            is_shared = s_["label"] in shared
+            if is_shared and r and stats[r - 1]["label"] not in shared:
+                body.append(f'<line x1="{x0 + 14}" y1="{ry - 15}" x2="{x0 + 366}" y2="{ry - 15}" stroke="{t["ink3"]}" '
+                            f'stroke-opacity=".45" stroke-dasharray="2 4"/>')
+            if is_shared:
+                body.append(icon("star", cx - 180, ry - 8, 1))
+            else:
+                body.append(f'<rect x="{cx - 176}" y="{ry - 4}" width="8" height="8" fill="{acc}" shape-rendering="crispEdges"/>')
+            weight = ' font-weight="700"' if s_["value"] >= STAT_MAX else ""
+            body.append(f'<text x="{cx - 160}" y="{ry + 5}" font-family="{FONT_UI}" font-size="14" fill="{t["ink2"]}"'
+                        f'{weight}>{esc(s_["label"])}</text>')
+            bar, bw = _stat_bar(cx - 16, ry - SEG_H / 2, int(s_["value"]), acc, t, f"{i}{r}", .4 + i * .5 + r * .15)
+            body.append(bar)
+            if s_["value"] >= STAT_MAX:
+                mx = cx + 138
+                body.append(f'<rect x="{mx}" y="{ry - 11}" width="44" height="22" rx="4" fill="url(#maxg)"/>'
+                            + ptext("MAX", mx + 5, ry - 7, 2, "#0E1726")
+                            + f'<g class="spk"><path d="M{mx + 42} {ry - 17}h2v4h4v2h-4v4h-2v-4h-4v-2h4z" fill="{t["sparkle"]}" '
+                              f'stroke="{t["ink"]}" stroke-width=".6"/></g>')
+            else:
+                v = str(int(s_["value"]))
+                body.append(ptext(v, cx + 180 - ptext_width(v, 2), ry - 7, 2, t["ink"]))
+    # XP-style status bar
+    sy = H - 46
+    body.append(f'<rect x="20" y="{sy}" width="{W - 46}" height="24" rx="3" fill="{t["paper2"]}" stroke="{t["ink3"]}" stroke-opacity=".5"/>')
+    if shared:
+        body.append(icon("star", 28, sy + 4, 1))
+        body.append(f'<text x="50" y="{sy + 17}" font-family="{FONT_UI}" font-size="13" fill="{t["ink2"]}">'
+                    f'{esc(" · ".join(sorted(shared)))} = crew stat, every cat has it</text>')
+    n_stats = sum(len(c.get("stats", [])[:4]) for c in P["cats"])
+    body.append(f'<text x="{W - 36}" y="{sy + 17}" text-anchor="end" font-family="{FONT_UI}" font-size="13" fill="{t["ink2"]}">'
+                f'{len(P["cats"])} cats · {n_stats} stats · {STAT_MAX} = MAX</text>')
+    return svg_doc(W, H, "".join(body), defs=defs, style=TB_SHINE_CSS + CAT_CSS + _crew_css(),
+                   title="cats.exe — the crew and their stats", desc=crew_alt(P))
 
 
 # =========================================================================== README
@@ -723,8 +856,8 @@ def readme(P, G):
     a("<!-- GUESTBOOK:END -->\n")
 
     # cats + contact + footer
-    a("<details>\n<summary><b>🐈 cats.exe</b> — meet the crew running around this page</summary>\n")
-    a(picture("crew", "Coco, Nemo and Tofu, three pixel cats"))
+    a("<details>\n<summary><b>🐈 cats.exe</b> — meet the crew running around this page (and their stats)</summary>\n")
+    a(picture("crew", crew_alt(P)))
     a("\n</details>\n")
     a('<div align="center">\n')
     links = [f'<a href="{P["linkedin"]}"><img src="assets/nav/linkedin.svg" height="38" alt="LinkedIn"></a>']

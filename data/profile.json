@@ -341,15 +341,40 @@
   "cats": [
     {
       "name": "Coco",
-      "sprite": "coco-run.png"
+      "sprite": "coco-run.png",
+      "class": "Night rogue",
+      "accent": "#4DB9BE",
+      "stats": [
+        { "label": "Stealth", "value": 9 },
+        { "label": "Elegance", "value": 10 },
+        { "label": "Food begging", "value": 9 },
+        { "label": "Zoomies", "value": 8 }
+      ]
     },
     {
       "name": "Nemo",
-      "sprite": "nemo-run.png"
+      "sprite": "nemo-run.png",
+      "class": "Chaos engineer",
+      "accent": "#3C85D6",
+      "stats": [
+        { "label": "Gravity testing", "value": 9 },
+        { "label": "Intelligence", "value": 10 },
+        { "label": "Lap occupancy", "value": 8 },
+        { "label": "Zoomies", "value": 9 }
+      ]
     },
     {
       "name": "Tofu",
-      "sprite": "tofu-run.png"
+      "sprite": "tofu-run.png",
+      "class": "Nap master",
+      "accent": "#E896A8",
+      "fx": "zzz",
+      "stats": [
+        { "label": "Nap power", "value": 10 },
+        { "label": "Fluff density", "value": 9 },
+        { "label": "Destroy power", "value": 9 },
+        { "label": "Zoomies", "value": 3 }
+      ]
     }
   ]
 }
