@@ -663,24 +663,6 @@ def readme(P, G):
         status = cert_status(x)
         a(f'| **{x["code"]}** | [{x["name"]}]({x["url"]}) | {x["issuer"]} | {x["level"]} | {status} |')
     a("\n</details>\n")
-    a("<details>\n<summary><b>🗺️ skill_map.mmd</b> — how the credentials stack up (pan &amp; zoom me)</summary>\n")
-    a("```mermaid")
-    a("%%{init: {'theme':'base','themeVariables':{'fontFamily':'Tahoma, Segoe UI, sans-serif','primaryColor':'#DCEEFF','primaryTextColor':'#0E1726','primaryBorderColor':'#0B3A8C','lineColor':'#3B4A5E'}}}%%")
-    a("flowchart LR")
-    tiers = {1: "Fundamentals &amp; Beginner", 2: "Associate &amp; Intermediate", 3: "Expert"}
-    for tier in (1, 2, 3):
-        a(f'  subgraph T{tier}["{tiers[tier]}"]')
-        for x in [y for y in certs if y["tier"] == tier]:
-            nid = x["code"].replace("-", "")
-            a(f'    {nid}["{x["code"]}<br/><small>{x["short"]}</small>"]:::{x["track"]}')
-        a("  end")
-    a("  T1 --> T2 --> T3")
-    for k, tr in TRACKS.items():
-        a(f"  classDef {k} fill:{tr['light']},stroke:{tr['dark']},stroke-width:2px,color:#0E1726")
-    a("```\n")
-    a("<sub>Levels as published by each issuer · arrows show the learning path, not official prerequisites.</sub>\n")
-    a("</details>\n")
-
     # projects
     a('<a id="projects"></a>\n')
     a(f'<img src="assets/bars/projects.svg" width="100%" alt="projects/ — {len(P["projects"])} featured">\n')

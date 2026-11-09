@@ -87,44 +87,6 @@ Hi, I'm **Victoria** 👋 — Cloud & AI Data Solution Engineer at **Microsoft**
 
 </details>
 
-<details>
-<summary><b>🗺️ skill_map.mmd</b> — how the credentials stack up (pan &amp; zoom me)</summary>
-
-```mermaid
-%%{init: {'theme':'base','themeVariables':{'fontFamily':'Tahoma, Segoe UI, sans-serif','primaryColor':'#DCEEFF','primaryTextColor':'#0E1726','primaryBorderColor':'#0B3A8C','lineColor':'#3B4A5E'}}}%%
-flowchart LR
-  subgraph T1["Fundamentals &amp; Beginner"]
-    AB731["AB-731<br/><small>AI Transformation Leader</small>"]:::biz
-    AB730["AB-730<br/><small>AI Business Professional</small>"]:::biz
-    AZ900["AZ-900<br/><small>Azure Fundamentals</small>"]:::cloud
-    AI900["AI-900<br/><small>Azure AI Fundamentals</small>"]:::ai
-    DP900["DP-900<br/><small>Azure Data Fundamentals</small>"]:::data
-  end
-  subgraph T2["Associate &amp; Intermediate"]
-    DP700["DP-700<br/><small>Fabric Data Engineer</small>"]:::data
-    DP600["DP-600<br/><small>Fabric Analytics Engineer</small>"]:::data
-    GH600["GH-600<br/><small>Agentic AI Developer</small>"]:::dev
-    DBXDEA["DBX-DEA<br/><small>Data Engineer Associate</small>"]:::dbx
-    AI102["AI-102<br/><small>Azure AI Engineer</small>"]:::ai
-    DP100["DP-100<br/><small>Azure Data Scientist</small>"]:::ai
-  end
-  subgraph T3["Expert"]
-    AB100["AB-100<br/><small>Agentic AI Business Solutions Architect</small>"]:::agent
-  end
-  T1 --> T2 --> T3
-  classDef cloud fill:#7CC0FF,stroke:#0B2F7A,stroke-width:2px,color:#0E1726
-  classDef ai fill:#C7B6FF,stroke:#33208F,stroke-width:2px,color:#0E1726
-  classDef data fill:#8FF0D4,stroke:#06493E,stroke-width:2px,color:#0E1726
-  classDef biz fill:#FFD0A1,stroke:#8A3400,stroke-width:2px,color:#0E1726
-  classDef agent fill:#FFB3D9,stroke:#6B0F3B,stroke-width:2px,color:#0E1726
-  classDef dev fill:#B9C4D6,stroke:#0E1726,stroke-width:2px,color:#0E1726
-  classDef dbx fill:#FFB3A3,stroke:#7A1606,stroke-width:2px,color:#0E1726
-```
-
-<sub>Levels as published by each issuer · arrows show the learning path, not official prerequisites.</sub>
-
-</details>
-
 <a id="projects"></a>
 
 <img src="assets/bars/projects.svg" width="100%" alt="projects/ — 4 featured">
