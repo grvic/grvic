@@ -1,0 +1,17 @@
+name: "✍️ Sign the guestbook"
+description: Leave your mark on victoria.exe — your avatar will appear on the profile.
+title: "✍️ Guestbook: hi Victoria!"
+labels: ["guestbook"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for stopping by! 🐈 Just press **Create** — a bot adds your GitHub avatar to the guestbook and closes this issue.
+        Only your public username and avatar are shown on the profile.
+  - type: textarea
+    id: message
+    attributes:
+      label: Say hi (optional — stays in this issue, it is not copied to the profile)
+      placeholder: "Hi from Madrid! 👋"
+    validations:
+      required: false

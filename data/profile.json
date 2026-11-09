@@ -1,0 +1,355 @@
+{
+  "login": "grvic",
+  "name": "Victoria Faranna",
+  "role": "Cloud & AI Data Solution Engineer",
+  "company": "Microsoft",
+  "location": "Madrid, Spain",
+  "tagline": "I measure what AI demos leave out.",
+  "linkedin": "https://www.linkedin.com/in/victoriafaranna",
+  "portfolio": "",
+  "typing": [
+    "Cloud & AI Data Solution Engineer @ Microsoft",
+    "Microsoft Fabric · Microsoft Foundry · agents",
+    "I measure what AI demos leave out.",
+    "Speaker @ Women in Fabric 2026",
+    "MSc AI Research (UNED) · in progress"
+  ],
+  "chips": [
+    {
+      "text": "Madrid, Spain",
+      "track": "cloud"
+    },
+    {
+      "text": "Microsoft",
+      "track": "data"
+    },
+    {
+      "text": "{certs} certifications",
+      "track": "agent"
+    },
+    {
+      "text": "Speaker · WiF 2026",
+      "track": "biz"
+    },
+    {
+      "text": "EN · ES",
+      "track": "dev"
+    }
+  ],
+  "terminal": [
+    {
+      "cmd": "whoami",
+      "out": "Victoria Faranna · Cloud & AI Data Solution Engineer @ Microsoft · Madrid"
+    },
+    {
+      "cmd": "type focus.txt",
+      "out": "Microsoft Fabric · Microsoft Foundry · agentic apps · Responsible AI"
+    },
+    {
+      "cmd": "dir achievements",
+      "out": "{certs} certifications · {issuers} issuers · {talks} conference talk"
+    },
+    {
+      "cmd": "echo %MOTTO%",
+      "out": "\"I measure what AI demos leave out.\"",
+      "highlight": true
+    }
+  ],
+  "intro": "Hi, I'm **Victoria** 👋 — Cloud & AI Data Solution Engineer at **Microsoft**, based in Madrid. I help teams go from idea to a working **Data & AI** solution: architecture sessions, workshops and proofs of concept on **Microsoft Fabric** and **Microsoft Foundry**, side by side with Sales, Partners and Engineering.",
+  "focus": [
+    "🏗️ **End-to-end Data & AI architecture** — Microsoft Fabric, Microsoft Foundry, agentic apps",
+    "🧪 **Workshops, proofs of concept & architecture sessions** that remove blockers",
+    "🌱 **Responsible & sustainable AI** — governance, bias, transparency and the energy cost of models",
+    "🎛️ **GenAI in the enterprise** — automation, avatars, video and audio",
+    "🎙️ **Speaker** at Women in Fabric 2026"
+  ],
+  "education": [
+    "🎓 **BSc Data Science & Engineering** — Universidad Carlos III de Madrid",
+    "🌍 **Erasmus exchange** — Politechnika Warszawska (Electronics & IT)",
+    "📜 **Microcredential in Responsible AI & Business Innovation** — UC3M (2025)",
+    "🔬 **MSc in AI Research** — UNED *(in progress, 2026–27)*"
+  ],
+  "stack": [
+    {
+      "group": "Data & Analytics",
+      "track": "data",
+      "icon": "chart",
+      "items": [
+        "Microsoft Fabric",
+        "Power BI",
+        "Real-Time Intelligence",
+        "Databricks",
+        "Spark",
+        "SQL"
+      ]
+    },
+    {
+      "group": "AI & Agents",
+      "track": "ai",
+      "icon": "star",
+      "items": [
+        "Microsoft Foundry",
+        "Azure OpenAI",
+        "RAG & hybrid search",
+        "Multi-agent systems",
+        "MCP",
+        "LLM-as-a-judge",
+        "CodeCarbon"
+      ]
+    },
+    {
+      "group": "Code",
+      "track": "dev",
+      "icon": "computer",
+      "items": [
+        "Python",
+        "TypeScript",
+        "JavaScript",
+        "PowerShell",
+        "Java",
+        "pandas",
+        "NumPy",
+        "TensorFlow"
+      ]
+    },
+    {
+      "group": "Cloud & Tools",
+      "track": "cloud",
+      "icon": "cpu",
+      "items": [
+        "Azure",
+        "GitHub Copilot",
+        "GitHub Actions",
+        "VS Code",
+        "React",
+        "Next.js",
+        "Gradio",
+        "Flask",
+        "MongoDB"
+      ]
+    }
+  ],
+  "skillicons": "python,ts,js,react,nextjs,azure,github,githubactions,vscode,mongodb,flask,tensorflow",
+  "certs": [
+    {
+      "code": "AB-100",
+      "short": "Agentic AI Business Solutions Architect",
+      "name": "Microsoft Certified: Agentic AI Business Solutions Architect Expert",
+      "issuer": "Microsoft",
+      "tier": 3,
+      "level": "Expert",
+      "track": "agent",
+      "url": "https://learn.microsoft.com/credentials/certifications/agentic-ai-business-solutions-architect/",
+      "show": true
+    },
+    {
+      "code": "DP-700",
+      "short": "Fabric Data Engineer",
+      "name": "Microsoft Certified: Fabric Data Engineer Associate",
+      "issuer": "Microsoft",
+      "tier": 2,
+      "level": "Associate",
+      "track": "data",
+      "url": "https://learn.microsoft.com/credentials/certifications/fabric-data-engineer-associate/",
+      "show": true
+    },
+    {
+      "code": "DP-600",
+      "short": "Fabric Analytics Engineer",
+      "name": "Microsoft Certified: Fabric Analytics Engineer Associate",
+      "issuer": "Microsoft",
+      "tier": 2,
+      "level": "Associate",
+      "track": "data",
+      "url": "https://learn.microsoft.com/credentials/certifications/fabric-analytics-engineer-associate/",
+      "show": true
+    },
+    {
+      "code": "GH-600",
+      "short": "Agentic AI Developer",
+      "name": "GitHub Certified: Agentic AI Developer",
+      "issuer": "GitHub",
+      "tier": 2,
+      "level": "Intermediate",
+      "track": "dev",
+      "url": "https://learn.microsoft.com/credentials/certifications/agentic-ai-developer/",
+      "show": true
+    },
+    {
+      "code": "DBX-DEA",
+      "short": "Data Engineer Associate",
+      "name": "Databricks Certified Data Engineer Associate",
+      "issuer": "Databricks",
+      "tier": 2,
+      "level": "Associate",
+      "track": "dbx",
+      "url": "https://www.databricks.com/learn/certification/data-engineer-associate",
+      "show": true,
+      "status": "Valid 2 years"
+    },
+    {
+      "code": "AI-102",
+      "short": "Azure AI Engineer",
+      "name": "Microsoft Certified: Azure AI Engineer Associate",
+      "issuer": "Microsoft",
+      "tier": 2,
+      "level": "Associate",
+      "track": "ai",
+      "legacy": true,
+      "note": "exam retired Jun 2026 (successor: AI-103)",
+      "url": "https://learn.microsoft.com/credentials/certifications/azure-ai-engineer/",
+      "show": true
+    },
+    {
+      "code": "DP-100",
+      "short": "Azure Data Scientist",
+      "name": "Microsoft Certified: Azure Data Scientist Associate",
+      "issuer": "Microsoft",
+      "tier": 2,
+      "level": "Associate",
+      "track": "ai",
+      "legacy": true,
+      "note": "exam retired Jun 2026 (successor: AI-300)",
+      "url": "https://learn.microsoft.com/credentials/certifications/azure-data-scientist/",
+      "show": true
+    },
+    {
+      "code": "AB-731",
+      "short": "AI Transformation Leader",
+      "name": "Microsoft Certified: AI Transformation Leader",
+      "issuer": "Microsoft",
+      "tier": 1,
+      "level": "Beginner",
+      "track": "biz",
+      "url": "https://learn.microsoft.com/credentials/certifications/ai-transformation-leader/",
+      "show": true
+    },
+    {
+      "code": "AB-730",
+      "short": "AI Business Professional",
+      "name": "Microsoft Certified: AI Business Professional",
+      "issuer": "Microsoft",
+      "tier": 1,
+      "level": "Beginner",
+      "track": "biz",
+      "url": "https://learn.microsoft.com/credentials/certifications/ai-business-professional/",
+      "show": true
+    },
+    {
+      "code": "AZ-900",
+      "short": "Azure Fundamentals",
+      "name": "Microsoft Certified: Azure Fundamentals",
+      "issuer": "Microsoft",
+      "tier": 1,
+      "level": "Fundamentals",
+      "track": "cloud",
+      "url": "https://learn.microsoft.com/credentials/certifications/azure-fundamentals/",
+      "show": true
+    },
+    {
+      "code": "AI-900",
+      "short": "Azure AI Fundamentals",
+      "name": "Microsoft Certified: Azure AI Fundamentals",
+      "issuer": "Microsoft",
+      "tier": 1,
+      "level": "Fundamentals",
+      "track": "ai",
+      "url": "https://learn.microsoft.com/credentials/certifications/azure-ai-fundamentals/",
+      "show": true
+    },
+    {
+      "code": "DP-900",
+      "short": "Azure Data Fundamentals",
+      "name": "Microsoft Certified: Azure Data Fundamentals",
+      "issuer": "Microsoft",
+      "tier": 1,
+      "level": "Fundamentals",
+      "track": "data",
+      "url": "https://learn.microsoft.com/credentials/certifications/azure-data-fundamentals/",
+      "show": true
+    }
+  ],
+  "verify_url": "",
+  "talks": [
+    {
+      "event": "Women in Fabric 2026",
+      "pixel": "WOMEN IN FABRIC 2026",
+      "title": "Cómo pasar de Data Platform a Application Platform con Fabric y apps agénticas",
+      "role": "Speaker (co-presented)",
+      "date": "3 Oct 2026",
+      "stamp": [
+        "SPEAKER",
+        "WIF 2026"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "repo": "sunchaser",
+      "desc": "Collaborative trip planner demo built with Microsoft Rayfin + Fabric Apps.",
+      "lang": "TypeScript",
+      "tags": [
+        "Fabric Apps",
+        "Rayfin",
+        "MIT"
+      ]
+    },
+    {
+      "repo": "rag-model-analysis",
+      "desc": "Energy-aware pipeline to evaluate RAG systems: hybrid search, LLM-as-a-judge scoring, CodeCarbon emissions and per-token cost tracking.",
+      "lang": "Python",
+      "tags": [
+        "RAG",
+        "Azure OpenAI",
+        "CodeCarbon"
+      ]
+    },
+    {
+      "repo": "playlist-generator",
+      "desc": "Turns a natural-language vibe into a YouTube playlist: Azure OpenAI parses the mood, Last.fm + MusicBrainz expand the artist graph, with a quota-aware preview.",
+      "lang": "Python",
+      "tags": [
+        "Azure OpenAI",
+        "CLI + web"
+      ]
+    },
+    {
+      "repo": "BonAppetit",
+      "desc": "Madrid restaurant analytics: data cleaning, geospatial maps by postcode and a Gradio recommender. University team project (4 authors).",
+      "lang": "Python",
+      "tags": [
+        "Gradio",
+        "Folium",
+        "team"
+      ]
+    }
+  ],
+  "more_repos": [
+    {
+      "repo": "content-understanding-demo",
+      "lang": "Python"
+    },
+    {
+      "repo": "detective-data-hack",
+      "lang": "PowerShell"
+    },
+    {
+      "repo": "cards-dataset",
+      "lang": "Python"
+    }
+  ],
+  "cats": [
+    {
+      "name": "Coco",
+      "sprite": "coco-run.png"
+    },
+    {
+      "name": "Nemo",
+      "sprite": "nemo-run.png"
+    },
+    {
+      "name": "Tofu",
+      "sprite": "tofu-run.png"
+    }
+  ]
+}
